@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Efectos de Iluminación Deportiva Neon */
+.neon-glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4), 0 0 50px rgba(16, 185, 129, 0.15);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(6, 182, 212, 0.15);
+}
+
+.neon-glow-amber {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), 0 0 50px rgba(245, 158, 11, 0.15);
+}
+
+.neon-glow-floodlight {
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.12), 0 0 35px rgba(56, 189, 248, 0.35);
+}
+
+/* Estilo de Ticket Deportivo Wallet */
+.ticket-edge-left {
+  position: relative;
+}
+.ticket-edge-left::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #020617; /* match bg-slate-950 */
+  border-radius: 50%;
+  border-right: 1px solid #334155;
+  z-index: 10;
+}
+
+.ticket-edge-right {
+  position: relative;
+}
+.ticket-edge-right::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #020617;
+  border-radius: 50%;
+  border-left: 1px solid #334155;
+  z-index: 10;
+}
+
+/* Patrón de césped deportivo */
+.turf-pattern {
+  background-color: #064e3b;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 255, 255, 0.04) 20px,
+    rgba(255, 255, 255, 0.04) 40px
+  );
+}
+
+.padel-glass-pattern {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
